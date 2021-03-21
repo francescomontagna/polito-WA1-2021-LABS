@@ -43,6 +43,12 @@ function TaskList() {
             console.log(el.toString());
         });
     };
+
+
+    this.filterAndPrint = () => {
+        // filter tasks that are not urgent
+        this.myTasks.filter( (t) => t.isUrgent).forEach( (t) => console.log(t.toString()));
+    };
 }
 
 const laundry = new Task(1, 'laundry', true, false, '2021-03-24T22:37:16+00:00');
@@ -59,3 +65,6 @@ tasks.add(club);
 
 console.log();
 tasks.sortAndPrint();
+
+console.log();
+tasks.filterAndPrint();
