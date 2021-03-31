@@ -31,7 +31,7 @@ function TaskList() {
     this.add = task => this.myTasks.push(task);
 }
 
-function load(query) {
+function load() {
     let tasks = new TaskList();
     return new Promise((resolve, reject) => {
         
@@ -42,25 +42,6 @@ function load(query) {
                 rows.forEach((el) => {
                     const newTask = new Task(el.id, el.description, el.urgent, el.private, el.deadline);
                     tasks.add(newTask);
-                });
-                resolve(tasks);
-            }
-        });
-    });
-}
-
-function loadAndPrint(deadline) {
-    let tasks = new TaskList();
-    return new Promise((resolve, reject) => {
-        
-        const query = 'SELECT * FROM tasks WHERE tasks.deadline > ?';
-        db.all(query, [deadline.format()], (err, rows) => {
-            if(err) reject(err);
-            else {
-                rows.forEach((el) => {
-                    const newTask = new Task(el.id, el.description, el.urgent, el.private, el.deadline);
-                    tasks.add(newTask);
-                    console.log(newTask.toString());
                 });
                 resolve(tasks);
             }
@@ -125,6 +106,7 @@ async function main() {
     const filteredTasks = await loadWithWord(word);
     filteredTasks.myTasks.forEach( (task) => console.log(task.toString()) );
 
+    debugger;
 }
 
 main();
