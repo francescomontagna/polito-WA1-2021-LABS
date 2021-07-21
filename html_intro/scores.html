@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- All the body in html tag -->
+<html>
+    <!-- html have ALWAYS 2 children: head and body -->
+    <head>
+        <title>My Score</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <!-- In the body we have all displayed content -->
+    <body>
+        <!-- header: sectioning -->
+        <div class='container-fluid'>
+            <header>
+                <h1>My Scores</h1>
+                <nav class="navigation">
+                    <!-- a tag: links, it is an inline element. #: link to same page -->
+                    <a href="#">Home</a>
+                    <a href="#">Statistics</a>
+                </nav>
+            </header  class='row'>
+            <!-- aside: sectioning -->
+            <div class='row'>
+                <aside class='col-sm-3'>
+                    <h3 class='important highlight'>Information</h3>
+                    <!-- ul instantiate a list -->
+                    <ul id='infolinks', class='info navigation'>
+                        <!-- li: block element, an item of the list -->
+                        <li><a href='dates'>Exam date</a></li>
+                        <li>Schedule</li>
+                        <li>Graduation</li>
+                    </ul>
+                </aside>
+                <!-- main: sectioning -->
+                <main class='col-9'>
+                    <h3>Your Scores</h3>
+                    <!-- p: block element. Could also use <div> if I do not have semantic meaning, instead of <p> -->
+                    <p>
+                        <div id="scorestable">
+                            <!-- table: inline -->
+                            <table class='scorestable'>
+                                <thead>
+                                    <!-- One row in the table heading -->
+                                    <tr>
+                                        <th>Course</th>
+                                        <th>Score</th>
+                                        <th>Dates</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Web App</td>
+                                        <td>30</td>
+                                        <td>02/02/2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data Bases</td>
+                                        <td>30</td>
+                                        <td>02/02/2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Physiscs</td>
+                                        <td>30</td>
+                                        <td>02/02/2020</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </p>
+                </main>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+body {
+    background-color: honeydew;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+#scorestable {
+    color:magenta;
+}
+
+td:hover {
+    color: navy;
+}
